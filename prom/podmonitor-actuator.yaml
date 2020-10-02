@@ -1,0 +1,13 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: monitor-actuator
+  labels:
+    component: pod-monitor
+spec:
+  selector:
+    matchLabels:
+      prometheus/scrape-type: actuator
+  podMetricsEndpoints:
+    - port: actuator
+      path: /actuator/prometheus

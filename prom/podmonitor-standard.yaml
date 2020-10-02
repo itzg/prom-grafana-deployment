@@ -1,0 +1,12 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: monitor-metrics-http
+  labels:
+    component: pod-monitor
+spec:
+  selector:
+    matchLabels:
+      prometheus/scrape-type: metrics
+  podMetricsEndpoints:
+    - port: http
