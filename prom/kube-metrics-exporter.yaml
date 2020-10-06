@@ -23,7 +23,7 @@ spec:
                   fieldPath: metadata.namespace
           ports:
             - containerPort: 8080
-              name: http
+              name: scrape
       serviceAccountName: kube-metrics-monitor
   selector:
     matchLabels:

@@ -9,4 +9,4 @@ spec:
     matchLabels:
       prometheus/scrape-type: metrics
   podMetricsEndpoints:
-    - port: http
+    - port: scrape
